@@ -3,29 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Personal Portfolio</title>
-    <link rel="stylesheet" href="myStyle.css">
+    <title>My Favorite Destination</title>
+    <link rel="stylesheet" href="travelStyle.css">
     <style type="text/css">
-        header p {
-            background-color: #552583;
-            color: black;
-            text-align: center;
+        header p{
+            background-color: #ff234a;
+            color: #000;
             padding: 20px;
+            margin: 0px;
+            font-family: Georgia, serif;
             font-size: 12pt;
             font-weight: bold;
-            margin: 0px;
         }
         h1{
             margin: 0px;
             font-family: Georgia, serif;
+            padding: 20px;
             font-size: 12pt;
         }
         nav{
-            background-color: #000;
-            padding: 0.8rem 0;
+            color: black;
+            padding: 0px;
+            margin: 0px;
         }
         nav a{
-            color: white;
+            color: black;
             text-decoration: none;
             margin: 0px;
             font-weight: bold;
@@ -53,8 +55,8 @@
             margin-bottom: 12px;
         }
         ul{
-            list-style-type: square;
-            padding-left: 20px;
+            list-style-type: circle;
+            padding: 10px;
         }
         ul li{
             margin: 8px 0;
@@ -83,47 +85,51 @@
 </head>
 <body>
     <header>
-        <h1>Miguel Joaquin T. Hufano</h1>
-        <p>Aspiring Web Developer</p>
+        <h1>Discover Baguio City!</h1>
+        <p>The city of Pines</p>
     </header>
-
-
-
     <nav>
-        <a href="#">Home</a> | 
-        <a href="#">About</a> | 
-        <a href="#">Projects</a> | 
-        <a href="#">Contact</a> 
+        <a href="#">Home</a> |
+        <a href="#">Attractions</a> |
+        <a href="#">Food</a> |
+        <a href="#">Contact</a>
+        <a href="#">Videos</a>
     </nav>
     <main>
         <section id="Home">
-            <h2>Home</h2>
-            <p>Welcome to my simple portfolio page! This website is created as part of our CSS  laboratory activity. 
-            It shows my personal information, background, and sample projects as a  beginner web developer.</p>
+            <h2>Welcome</h2>
+            <p>Mabuhay! I am your tourist guide Miguel Joaquin T. Hufano, a student from the University of Baguio, 
+            here to show you the different tourist spots here in Baguio City</p>
         </section>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>My name is Miguel Joaquin T. Hufano, a first-year BS Information Technology student. I love learning web technologies
-                and building creative websites. My hobbies include playing basketball, coding, and researching new web designing apps.
-            </p>
-        </section>
-        <section id="projects">
-            <h2>My Projects:</h2>
+        <section id="Attractions">
+            <h2>Top Attractions</h2>
             <ul>
-                <li>Simple Calculator using HTML and CSS</li>
-                <li>Student Registration Form using HTML</li> 
-                <li>Personal Profile Page Project</li> 
+                <li>Burnham Park</li>
+                <li>Camp John Hay</li>
+                <li>Diplomat Hotel</li>
+                <li>Mirador Eco Park</li>
             </ul>
         </section>
-        <section id="contact">
-            <h2>Contact Me:</h2>
-            <p>You can reach me through the following:</p>
-            <p>Email: mjthufano@gmail.com</p>
-            <p>Facebook: fb.com/MiguelJoaquin</p>
+        <section id="Food">
+            <h2>Famous Local Food</h2>
+            <p>Baguio is known for its strawberries, ube jam, and fresh vegetables. Visitors
+                often enjoy local treats at the Baguio Public Market and night markets.</p>
+        </section>
+        <section id="Contacts">
+            <h2>Contact Information</h2>
+            <p>For more information, visit: <a href="https://www.baguio.gov.ph"
+                target="_blank">Baguio City Official Website</a></p>
+                <p>Email: info@baguio-tourism.ph</p>
+        </section>
+        <section id="Videos">
+            <iframe src="https://www.youtube.com/embed/uOH0K-NMkN8" allowfullscreen>Camp John Hay</iframe>
+            <iframe src="https://www.youtube.com/embed/lwXso3hebMA" allowfullscreen>Diplomat Hotel</iframe>
+            <iframe src="https://www.youtube.com/embed/4FPQ2idoZYY" allowfullscreen>Mirador Hill Eco Park</iframe>
+            <iframe src="https://www.youtube.com/embed/MJ7OL426LBA" allowfullscreen>Burnham park</iframe>
         </section>
     </main>
     <footer>
-        <p>&copy; 2025 Miguel Joaquin T. Hufano. All rights reserved.</p> 
+        <p>&copy; 2025 Discover Baguio. All rights reserved.</p>
     </footer>
 </body>
 </html>
