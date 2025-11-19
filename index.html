@@ -1,135 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Favorite Destination</title>
-    <link rel="stylesheet" href="travelStyle.css">
-    <style type="text/css">
-        header p{
-            background-color: #ff234a;
-            color: #000;
-            padding: 20px;
-            margin: 0px;
-            font-family: Georgia, serif;
-            font-size: 12pt;
-            font-weight: bold;
-        }
-        h1{
-            margin: 0px;
-            font-family: Georgia, serif;
-            padding: 20px;
-            font-size: 12pt;
-        }
-        nav{
-            color: black;
-            padding: 0px;
-            margin: 0px;
-        }
-        nav a{
-            color: black;
-            text-decoration: none;
-            margin: 0px;
-            font-weight: bold;
-            transition: color 0.3s;
-        }
-        nav a:hover{
-            color: #005fa3;
-        }
-        main{
-            max-width: 900px;
-            margin: 20px;
-            padding: 20px;
-        }
-        section{
-            background-color: white;
-            padding: 15px;
-            margin-bottom: 5px;
-            border-radius: 5px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.1);
-        }
-        section h2{
-            color: #0078d7;
-            border-bottom: 1px solid #552583;
-            padding-bottom: 5px;
-            margin-bottom: 12px;
-        }
-        ul{
-            list-style-type: circle;
-            padding: 10px;
-        }
-        ul li{
-            margin: 8px 0;
-        }
-        footer{
-            background-color: #552583;
-            color: #fff;
-            text-align: center;
-            padding: 20px;
-            margin-top: 2px;
-            font-size: 12pt;
-        }
-        @media(max-width: 600px){
-            header h1{
-                padding: 0 10px;
-            }
-        }
-        main{
-            padding: 0 10px;
-        }
-        nav a{
-            display: block;
-            margin: 10px 0;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive page using grid</title>
+  <style type="text/css">
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.container {
+  display: grid;
+  grid-template-areas:
+    "header header"
+    "sidebar main"
+    "footer footer";
+  grid-template-columns: 1fr 3fr;
+  gap: 10px;
+  padding: 10px;
+}
+.box {
+  background: #dfe7ff;
+  padding: 20px;
+  border: 1px solid #8aa2d3;
+  font-size: 1.2rem;
+  text-align: center;
+}
+.header { 
+  grid-area: header; 
+}
+.sidebar { 
+    grid-area: sidebar; 
+}
+.main { 
+    grid-area: main; 
+}
+.footer { 
+    grid-area: footer; 
+}
+.subcontent {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+@media (max-width: 768px) {
+  .container {
+    grid-template-areas:
+      "header"
+      "sidebar"
+      "main"
+      "footer";
+    grid-template-columns: 1fr;
+  }
+  .subcontent {
+    grid-template-columns: 1fr;
+  }
+} 
+</style>
 </head>
 <body>
-    <header>
-        <h1>Discover Baguio City!</h1>
-        <p>The city of Pines</p>
-    </header>
-    <nav>
-        <a href="#">Home</a> |
-        <a href="#">Attractions</a> |
-        <a href="#">Food</a> |
-        <a href="#">Contact</a>
-        <a href="#">Videos</a>
-    </nav>
-    <main>
-        <section id="Home">
-            <h2>Welcome</h2>
-            <p>Mabuhay! I am your tourist guide Miguel Joaquin T. Hufano, a student from the University of Baguio, 
-            here to show you the different tourist spots here in Baguio City</p>
-        </section>
-        <section id="Attractions">
-            <h2>Top Attractions</h2>
-            <ul>
-                <li>Burnham Park</li>
-                <li>Camp John Hay</li>
-                <li>Diplomat Hotel</li>
-                <li>Mirador Eco Park</li>
-            </ul>
-        </section>
-        <section id="Food">
-            <h2>Famous Local Food</h2>
-            <p>Baguio is known for its strawberries, ube jam, and fresh vegetables. Visitors
-                often enjoy local treats at the Baguio Public Market and night markets.</p>
-        </section>
-        <section id="Contacts">
-            <h2>Contact Information</h2>
-            <p>For more information, visit: <a href="https://www.baguio.gov.ph"
-                target="_blank">Baguio City Official Website</a></p>
-                <p>Email: info@baguio-tourism.ph</p>
-        </section>
-        <section id="Videos">
-            <iframe src="https://www.youtube.com/embed/uOH0K-NMkN8" allowfullscreen>Camp John Hay</iframe>
-            <iframe src="https://www.youtube.com/embed/lwXso3hebMA" allowfullscreen>Diplomat Hotel</iframe>
-            <iframe src="https://www.youtube.com/embed/4FPQ2idoZYY" allowfullscreen>Mirador Hill Eco Park</iframe>
-            <iframe src="https://www.youtube.com/embed/MJ7OL426LBA" allowfullscreen>Burnham park</iframe>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Discover Baguio. All rights reserved.</p>
-    </footer>
+    <div class="container">
+        <div class="header box">
+          Header
+        </div>
+        <div class="sidebar box">
+          Sidebar
+        </div>
+        <div class="main box">
+          Main Content
+          <div class="subcontent">
+            <div class="box">Sub Content 1</div>
+            <div class="box">Sub Content 2</div>
+          </div>
+        </div>
+        <div class="footer box">
+          Footer
+        </div>
+      </div>
 </body>
 </html>
